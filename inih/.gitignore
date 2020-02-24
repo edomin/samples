@@ -1,0 +1,4 @@
+*.o
+/sample
+/from_string.ini
+*.a
