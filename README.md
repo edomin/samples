@@ -5,6 +5,14 @@ refactoring etc.
 
 Samples:
 
+* [**inih**](https://github.com/edomin/samples/tree/master/inih) - 
+attempt to inplement library-like API for working with ini files using inih 
+library. Sample consist: Ini structure with sections containing key-value data, 
+addition and deletion sections and keys, access to sections and keys by index, 
+counting sections in ini and keys in sections, possibility to use custom i/o 
+functions for save/load ini data (for example if you use PhysFS library).
+* [**ketopt**](https://github.com/edomin/samples/tree/master/ketopt) - parsing 
+commandline options with ketopt library.
 * [**posix_signal_handling**](https://github.com/edomin/samples/tree/master/posix_signal_handling) - 
 attempt to implement signal handling with backtraces using addr2line utility. 
 Based on 
@@ -13,14 +21,9 @@ Based on
 [released to public domain](https://gist.github.com/jvranish/4441299#gistcomment-1385251)).
 Also implemented correct (relatively) output of line numbers of function loaded 
 from shared object via dlopen.
-* [**inih**](https://github.com/edomin/samples/tree/master/posix_signal_handling) - 
-attempt to inplement library-like API for working with ini files using inih 
-library. Sample consist: Ini structure with sections containing key-value data, 
-addition and deletion sections and keys, access to sections and keys by index, 
-counting sections in ini and keys in sections, possibility to use custom i/o 
-functions for save/load ini data (for example if you use PhysFS library).
 
 Source code of samples released to public domain (license CC0). 
+
 Bundled third-party dependencies have their own licenses. Typically its' 
 license texts can be found in "contrib/<third_party_name>" directory in files 
 COPYING, LICENSE and so on. For example, license text for inih bundled with 
