@@ -1,0 +1,10 @@
+language: c
+branches:
+  only:
+  - master
+script:
+  - make -j tests
+  - build/sirtests
+compiler:
+  - clang
+  - gcc

@@ -21,6 +21,8 @@ Based on
 [released to public domain](https://gist.github.com/jvranish/4441299#gistcomment-1385251)).
 Also implemented correct (relatively) output of line numbers of function loaded 
 from shared object via dlopen.
+* [**libsir**](https://github.com/edomin/samples/tree/master/libsir) - logging 
+with libsir library.
 
 Source code of samples released to public domain (license CC0). 
 
