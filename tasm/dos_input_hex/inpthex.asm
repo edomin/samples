@@ -2,7 +2,11 @@
 .stack 256
 
 .data
-msg db "Input 2 hex numbers: $"
+msg    db "Input 2 hex numbers: $"
+decode db 48 dup(0)
+       db 0h, 1h, 2h, 3h, 4h, 5h, 6h, 7h, 8h, 9h, 7 dup(0)
+       db 0Ah, 0Bh, 0Ch, 0Dh, 0Eh, 0Fh, 26 dup(0)
+       db 0Ah, 0Bh, 0Ch, 0Dh, 0Eh, 0Fh, 133 dup(0)
 
 .code
 main:
@@ -15,55 +19,30 @@ main:
     mov dx, offset msg
     int 21h
 
-    ; Clean ax and dl
+    ; Clean ax
     xor ax, ax
-    xor dl, dl
 
     ; Input character
     mov ah, 1
     int 21h
 
-    ; If below ASCII-code of '0'
-    cmp al, 30h
-    jl inputSecond
+    ; Move decode table address to bx
+    lea bx, decode
+    ; Decode
+    xlat
 
-    ; If lower or equal ASCII-code of '9'
-    cmp al, 39h
-    jle number_1
-
-    ; Transform ASCII-code of capital letter to HEX
-    sub al, 37h
-    jmp inputSecond
-number_1:
-    ; Transform ASCII-code of number to HEX
-    sub al, 30h
-
-inputSecond:
-    ; Move HEX to dl
+    ; Move first HEX-character to dl
     mov dl, al
-
-    ; Input character
-    int 21h
-
-    ; If below ASCII-code of '0'
-    cmp al, 30h
-    jl exit
 
     ; Move first HEX-character to higher nimble
     shl dl, 4
 
-    ; If lower or equal ASCII-code of '9'
-    cmp al, 39h
-    jle number_2
+    ; Input character
+    int 21h
 
-    ; Transform ASCII-code of capital letter to HEX
-    sub al, 37h
-    jmp exit
-number_2:
-    ; Transform ASCII-code of number to HEX
-    sub al, 30h
+    ; Decode
+    xlat
 
-exit:
     ; Move second HEX-character to lower nimble of dl
     or dl, al
 
