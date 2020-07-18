@@ -2,22 +2,33 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Wshadow -Wno-unused-parameter -Wno-unused-variable \
  -Wno-unused-but-set-variable -Werror -O0 -ggdb3 -I../contrib/libsir
 
-all: sample ../contrib/libsir/build/lib/libsir_s.a
+all: sample
 
 run: sample
 	./sample
 
 rebuild: clean sample
 
-sample: main.o ../contrib/libsir/build/lib/libsir_s.a
-	$(CC) -o sample main.o -L../contrib/libsir/build/lib -lsir_s -lpthread
+sample: main.o libsir/build/lib/libsir_s.a
+	$(CC) -o sample main.o -Llibsir/build/lib -lsir_s -lpthread
 
-../contrib/libsir/build/lib/libsir_s.a:
-	cd ../contrib/libsir ; make static
+libsir/build/lib/libsir_s.a: libsir
+	cd libsir ; make static
+
+libsir: libsir.tar.gz
+	mkdir libsir
+	tar -xf libsir.tar.gz -C libsir
+	mv libsir/`tar --list -f libsir.tar.gz | head -n1`/* libsir
+# 	cp libsir/`tar --list -f inih.tar.gz | head -n1`/ini.c inih/ini.c
+# 	cp libsir/`tar --list -f inih.tar.gz | head -n1`/ini.h inih/ini.h
+
+libsir.tar.gz:
+	curl -s https://api.github.com/repos/ryanlederman/libsir/releases/latest | \
+     grep "tarball_url" | cut -d" " -f4 | tr -d ",\"" | \
+     wget -i - -O libsir.tar.gz
 
 main.o: main.c
 	$(CC) $(CFLAGS) -o main.o -c main.c
 
 clean:
-	rm -f main.o
-	rm -rf ../contrib/libsir/build
+	rm -rf ./main.o ./sample ./libsir libsir.tar.gz sample.log
