@@ -35,9 +35,4 @@ Directory structure:
 DosBox
     - tasm/dos_input_hex - Example of input HEX byte in DL.
 
-Source code of samples released to public domain (license CC0). 
-
-Bundled third-party dependencies have their own licenses. Typically its' 
-license texts can be found in "contrib/<third_party_name>" directory in files 
-COPYING, LICENSE and so on. For example, license text for inih bundled with 
-samples can be found in file "contrib/inih/LICENSE.txt".
+Source code of samples released to public domain (license CC0).
