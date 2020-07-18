@@ -5,6 +5,10 @@ refactoring etc.
 
 Samples:
 
+* [**awk**](https://github.com/edomin/samples/tree/master/awk) - I learning 
+awk. I found some exercises in the network and trying to complete it.
+Directory structure:
+    - awk/numbers - simple exercises for processing 2d array of integer numbers.
 * [**inih**](https://github.com/edomin/samples/tree/master/inih) - 
 attempt to inplement library-like API for working with ini files using inih 
 library. Sample consist: Ini structure with sections containing key-value data, 
