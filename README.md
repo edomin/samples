@@ -9,6 +9,10 @@ Samples:
 awk. I found some exercises in the network and trying to complete it.
 Directory structure:
     - awk/numbers - simple exercises for processing 2d array of integer numbers.
+    - awk/people - sample of parsing people data file
+    - awk/exercism - exercises from 
+[exercism.io](https://exercism.io/tracks/bash/exercises) adapted from bash to 
+awk
 * [**inih**](https://github.com/edomin/samples/tree/master/inih) - 
 attempt to inplement library-like API for working with ini files using inih 
 library. Sample consist: Ini structure with sections containing key-value data, 

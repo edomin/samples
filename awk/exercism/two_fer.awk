@@ -1,0 +1,19 @@
+#!/usr/bin/awk -f
+
+# Source: https://exercism.io/tracks/bash/exercises/two-fer
+
+# Two-fer or 2-fer is short for two for one. One for you and one for me.
+# Given a name, return a string with the message:
+# One for name, one for me.
+# Where "name" is the given name.
+# However, if the name is missing, return the string:
+# One for you, one for me.
+
+BEGIN {
+    if (ARGC > 1)
+        you = ARGV[1];
+    else
+        you = "you";
+
+    print "One for " you ", one for me.";
+}
