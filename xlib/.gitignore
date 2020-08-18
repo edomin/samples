@@ -1,0 +1,4 @@
+*.o
+libkeysym2ucs.a
+/sample
+keysym2ucs/
