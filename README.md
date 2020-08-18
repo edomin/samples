@@ -31,6 +31,9 @@ Based on
 [released to public domain](https://gist.github.com/jvranish/4441299#gistcomment-1385251)).
 Also implemented correct (relatively) output of line numbers of function loaded 
 from shared object via dlopen.
+* [**sockets/time_client**](https://github.com/edomin/samples/tree/master/sockets/time_client) - 
+incomplete sample of getting time using various protocols. Currently 
+implemented TIME and DAYTIME protocols. TODO NTP.
 * [**tasm**](https://github.com/edomin/samples/tree/master/tasm) - writing 
 small programs with TASM while learning assembly for DOS. Not recommended for 
 use as third-party code/snippet/library because writen by Assembly-noob. 
