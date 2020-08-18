@@ -38,5 +38,8 @@ Directory structure:
     - tasm/scripts - some common scripts for building and running examples with 
 DosBox
     - tasm/dos_input_hex - Example of input HEX byte in DL.
+* [**unix/shell**](https://github.com/edomin/samples/tree/master/unix/shell) - 
+envoking unix utils by typing its name in stdin. It is not complete shell 
+because it can not do piping and can not process shell syntax.
 
 Source code of samples released to public domain (license CC0).
