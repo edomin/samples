@@ -13,6 +13,41 @@ Directory structure:
     - awk/exercism - exercises from 
 [exercism.io](https://exercism.io/tracks/bash/exercises) adapted from bash to 
 awk
+* [**compound_literals**](https://github.com/edomin/samples/tree/master/compound_literals) - 
+Test support of compound literals for initialization of struct members which 
+are pointers. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usage: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile with gcc and 
+-std=c99 option:
+```
+        $ make c99
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile with gcc and 
+-std=c89 option:
+```
+        $ make c89
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile with gcc and 
+-std=c89 and -ansi options:
+```
+        $ make ansi
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile with gcc and 
+-std=c99 and -Wpedantic options:
+```
+        $ make pedantic99
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile with gcc and 
+-std=c89 and -Wpedantic options (must fail):
+```
+        $ make pedantic89
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile with tcc:
+```
+        $ make tcc
+```
 * [**inih**](https://github.com/edomin/samples/tree/master/inih) - 
 attempt to inplement library-like API for working with ini files using inih 
 library. Sample consist: Ini structure with sections containing key-value data, 
