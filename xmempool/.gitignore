@@ -1,0 +1,5 @@
+*.o
+/sample
+*.a
+/xmempool
+/xmempool.tar.gz

@@ -81,5 +81,8 @@ envoking unix utils by typing its name in stdin. It is not complete shell
 because it can not do piping and can not process shell syntax.
 * [**xlib**](https://github.com/edomin/samples/tree/master/xlib) - learning 
 xlib. Currently incomplete sample.
+* [**xmempool**](https://github.com/edomin/samples/tree/master/xmempool) - 
+learning how to use xmempool library. Task - allocate memory for structure, 
+then free memory and then check that structure freed.
 
 Source code of samples released to public domain (license CC0).
