@@ -19,8 +19,6 @@ libsir: libsir.tar.gz
 	mkdir libsir
 	tar -xf libsir.tar.gz -C libsir
 	mv libsir/`tar --list -f libsir.tar.gz | head -n1`/* libsir
-# 	cp libsir/`tar --list -f inih.tar.gz | head -n1`/ini.c inih/ini.c
-# 	cp libsir/`tar --list -f inih.tar.gz | head -n1`/ini.h inih/ini.h
 
 libsir.tar.gz:
 	curl -s https://api.github.com/repos/ryanlederman/libsir/releases/latest | \
